@@ -1,0 +1,6 @@
+a = open('../data/json_text.txt')
+a = a.readline()
+b = a.split('},{')
+wtext = '}\n{'.join(b)
+fw = open('../data/json_new_format.txt','w')
+fw.write(wtext)
