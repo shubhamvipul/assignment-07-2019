@@ -16,8 +16,8 @@ The file is supposed to have number of json objects in multiples of -
 - 1,000 if the total number of objects is below 100,000.
 - 10,000 if the total number of objects is more than 100,000.
 
-This is because the python script generates files containing json objects in intervals of the latter number (stored in 'temp.txt' by python-script) above depending on the total number of objects. Each file-read and operation execution takes place in an independent thread, as suggested in the previous meeting. 
-To recap, my earlier implementation only performed the operations on the thread after the read operation which took a significant chunk of time. With the current implementation, by reading files in parallel, the speed-up is at least two-fold than on a single thread or the previous implementation. Also, mutex-lock was removed since now the results are stored in independent object variables than in a single object. In the end, a 'reduce' type of operation summarizes the results.
+This is because the python script generates files containing chunks of json objects in intervals of the latter number (stored in 'temp.txt' by python-script) above depending on the total number of objects. Each file-read and operation execution takes place in an independent thread, as suggested in the previous meeting. 
+To recap, my earlier implementation only performed the operations on the thread after the read operation in the main function which took a significant portion of time. With the current implementation, by reading files in parallel, the speed-up is at least two-fold than on a single thread or the previous implementation. Also, mutex-lock was removed since now the results are stored in independent object variables than in a single object. In the end, a 'reduce' type of operation summarizes the results.
 
 Outputs for the provided three files are stored in the results folder. The results file produced on running the above script and program is stored in the same folder.
 
