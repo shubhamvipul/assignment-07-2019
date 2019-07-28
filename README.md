@@ -1,13 +1,13 @@
 ## assignment-07-2019
 
-*Libraries used:*
+**Libraries used:**
 
 chrono; thread; nlohmann/json
 
-*Commands to be run:*
+**Commands to be run:**
 
-`<addr>`python3 q.py
-`<addr>`g++ -std=c++11
+python3 q.py
+g++ -std=c++11
 
 The input json file is to be named as 'json_text.txt' in the 'data' folder.
 The file is supposed to have number of json objects in multiples of -
