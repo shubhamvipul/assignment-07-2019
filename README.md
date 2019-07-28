@@ -1,4 +1,4 @@
-## Multithreading exercise
+## Large scale processing of JSON objects
 
 **Libraries used:**
 
