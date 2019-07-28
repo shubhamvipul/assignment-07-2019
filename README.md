@@ -21,25 +21,25 @@ To recap, my earlier implementation only performed the operations on the thread 
 
 Outputs for the provided three files are stored in the results folder. The results file produced on running the above script and program is stored in the same folder.
 
-sysctl hw.physicalcpu hw.logicalcpu
+*sysctl hw.physicalcpu hw.logicalcpu*
 > 2; 4
 
 Thus, 2 physical cores.
 
-sysctl -n hw.memsize: 
+*sysctl -n hw.memsize* 
 > 17179869184 bytes = 16 GB
 
-sysctl -n hw.physmem: 
+*sysctl -n hw.physmem*
 > 2147483648 = 2 GB
 
 Thus, size of physical memory is 2GB.
 
-diskutil info disk0
+*diskutil info disk0*
 >  Solid State:               Yes
 
 SSD hard-disk is present.
 
-system_profiler SPSoftwareDataType
+*system_profiler SPSoftwareDataType*
 > System Software Overview:
 
       System Version: macOS 10.14.5 (18F132)
