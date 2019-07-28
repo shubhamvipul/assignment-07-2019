@@ -28,6 +28,7 @@ Thus, 2 physical cores.
 
 sysctl -n hw.memsize: 
 > 17179869184 bytes = 16 GB
+
 sysctl -n hw.physmem: 
 > 2147483648 = 2 GB
 
