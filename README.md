@@ -1,10 +1,10 @@
 ## assignment-07-2019
 
-#Libraries used:
+*Libraries used:*
 
 chrono; thread; nlohmann/json
 
-#Commands to be run:
+*Commands to be run:*
 
 python3 q.py
 g++ -std=c++11
