@@ -129,7 +129,7 @@ int main()
 
     std::ofstream mfile;
 
-    mfile.open("results.txt");
+    mfile.open("../results/results.txt");
 
     mfile << "1. " << std::to_string(avgcost) << std::endl;
     mfile << "2. " << std::to_string(maxcomp) << std::endl;
