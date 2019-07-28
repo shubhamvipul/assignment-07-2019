@@ -1,28 +1,25 @@
 # assignment-07-2019
 
-TASK 1
-
 Libraries used:
 
-mutex; chrono; thread; nlohmann/json
+chrono; thread; nlohmann/json
 
 Commands to be run:
 
 python3 q.py
 g++ -std=c++11
 
-The output of the program is in the console. Kindly note that the id-lists for Query 3 and 4 are present but have note been printed.
+The input json file is to be named as 'json_text.txt' in the 'data' folder.
+The file is supposed to have number of json objects in multiples of -
 
---------------
+- 100 if the total number of objects is below 5,000.
+- 1,000 if the total number of objects is below 100,000.
+- 10,000 if the total number of objects is more than 100,000.
 
-TASK 2
+This is because the python script generates files containing json objects in intervals of the latter number (stored in 'temp.txt' by python-script) above depending on the total number of objects. Each file-read and operation execution takes place in an independent thread, as suggested in the previous meeting. 
+To recap, my earlier implementation only performed the operations on the thread after the read operation which took a significant chunk of time. With the current implementation, by reading files in parallel, the speed-up is at least two-fold than on a single thread or the previous implementation. Also, mutex-lock was removed since now the results are stored in independent object variables than in a single object. In the end, a 'reduce' type of operation summarizes the results.
 
-Multithreading has been used for each 1000 rows of json; can be increased to 10,000 for larger files.
-Mutex lock has been used for shared global resource (struct that contains the answers). Program only has to go to the mutex-protected resource after processing is done on that chunck of json and variables are ready for comparing or pushing to the list.
-
---------------
-
-TASK 3
+Outputs for the provided three files are stored in the results folder. The results file produced on running the above script and program is stored in the same folder.
 
 sysctl hw.physicalcpu hw.logicalcpu
 > 2; 4
@@ -56,8 +53,6 @@ system_profiler SPSoftwareDataType
 
 macOS 10.14.5
 
-
-Difference between serialized process and multi-threaded one is not much (multi-threaded being the more efficient one), meaning assignment is taking up a significant portion of time.
 
 
 
