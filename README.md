@@ -1,4 +1,4 @@
-## assignment-07-2019
+## Multithreading exercise
 
 **Libraries used:**
 
